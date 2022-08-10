@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Sketchpad</title>
+</head>
+<body>
+  <div id="gridSizeDiv">
+    <label for="gridSize">Grid Size:</label>
+    <div class="slidecontainer">
+      <input type="range" min="2" max="64" value="16" class="slider" id="gridRange">
+      <p id="gridSlideValue">hi</p>
+    </div>
+    <!-- <input type="text" placeholder="Enter a number" id="gridSize">
+    <button id="gridSizeButton" type="button" onClick="getGridSizeValue()">Enter</button> -->
+  </div>
+
+  <div id="mainBody">
+    <div id="leftSection">
+      <div id="colorDisplay"></div>
+      <div id="colorSelectors">
+        <!-- <input type="number" name="" id="red"> -->
+        <div class="redSlideCont">
+          <input type="range" min="0" max="255" value="49" class="slider" id="redRange">
+          <p id="redSlideValue">hi</p>
+        </div>
+        <!-- <input type="number" name="" id="green"> -->
+        <div class="greenSlideCont">
+          <input type="range" min="0" max="255" value="16" class="slider" id="greenRange">
+          <p id="greenSlideValue">hi</p>
+        </div>
+        <!-- <input type="number" name="" id="blue"> -->
+        <div class="blueSliderCont">
+          <input type="range" min="0" max="255" value="255" class="slider" id="blueRange">
+          <p id="blueSlideValue">hi</p>
+        </div>
+      </div>
+      <h1 id="rainbow-text">-SLIDE-TO-COLOR-</h1>
+
+      <button id="pageReload">Clear the Pad</button>
+
+      <button id="eraser">Eraser</button>
+
+      <button id="opasity">Opasity Flicker</button>
+
+      
+    </div>
+    
+
+    <div id="pad"></div>
+    
+  </div>
+
+  
+
+  <script src="code.js"></script>
+</body>
+</html>
