@@ -75,7 +75,7 @@ function buildUpdatedGrid() {
 // Determine box width and height 
 
 function setBoxParams() {
-  let size = ((640 / gridSizeVal) - 2);
+  let size = ((540 / gridSizeVal) - 2);
 
   Array.from(document.querySelectorAll("#box")).forEach(b => {
     b.style.width = `${size}px`;
@@ -90,9 +90,12 @@ function buildGrid() {
     for (let i_2 = 0; i_2 < gridSizeVal; i_2++) {
       let currentBox = document.createElement('div')
       currentBox.setAttribute('id', 'box');
+      // currentBox.setAttribute('onmouseup', 'mouseUp()');
+      // currentBox.setAttribute('onmousedown', 'mouseDown()');
       pad.appendChild(currentBox);
     }
   }
+  
 }
 
 // Removes All Children Elements
@@ -139,12 +142,10 @@ blueSlider.addEventListener("input", function (event) {
   currentColor = `rgb(${r}, ${g}, ${b})`;
 })
 
+
 // Main Game
 
-function mainGame() {
-
-  // Detect when mouse hovers over a box
-
+function mouseDown() {
   Array.from(pad.children).forEach((b) => {
     b.addEventListener('mouseover', () => {
       b.style.backgroundColor = currentColor;
@@ -152,12 +153,33 @@ function mainGame() {
   })
 }
 
+function mouseUp() {
+  Array.from(pad.children).forEach((b) => {
+    let new_b = b.cloneNode(true);
+    b.parentNode.replaceChild(new_b, b);
+  })
+}
+
+
+function mainGame() {
+
+  // Detect when mouse hovers over a box
+
+  // Array.from(pad.children).forEach((b) => {
+  //   b.addEventListener('mouseover', () => {
+  //     b.style.backgroundColor = currentColor;
+  //   })
+  // })
+}
+
 
 mainGame(true);
+
 
 // Implement opacity, that keeps on increasing by 0.2
 // where current color will be just white
 
+// Change Clear the Pad implementation to just turn each box back to white color instead of refreshing
 
 // OLD CODE
 

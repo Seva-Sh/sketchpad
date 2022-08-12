@@ -7,11 +7,11 @@
   <link rel="stylesheet" href="styles.css">
   <title>Sketchpad</title>
 </head>
-<body>
+<body >
   <div id="gridSizeDiv">
     <label for="gridSize">Grid Size:</label>
     <div class="slidecontainer">
-      <input type="range" min="2" max="64" value="16" class="slider" id="gridRange">
+      <input type="range" min="2" max="64" value="30" class="slider" id="gridRange">
       <p id="gridSlideValue">hi</p>
     </div>
     <!-- <input type="text" placeholder="Enter a number" id="gridSize">
@@ -50,7 +50,7 @@
     </div>
     
 
-    <div id="pad"></div>
+    <div id="pad" onmousedown="mouseDown()" onmouseup="mouseUp()"></div>
     
   </div>
 

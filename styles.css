@@ -1,3 +1,15 @@
+/* Disable Selection */
+
+* {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
 html {
   background-color: #66ffc2;
   /* background-color: rgb(49, 157, 186);
@@ -23,19 +35,19 @@ body {
 }
 
 #pad {
-  width: 640px;
-  height: 640px;
+  width: 540px;
+  height: 540px;
   border: 2px solid black;
   display: flex;
   flex-wrap: wrap;
   background-color: white;
-  margin-right: 400px;
+  /* margin-right: 500px; */
 }
 
 #box {
-  width: 38px;
-  height: 38px;
-  border: 1px dashed grey;
+  width: 16px;
+  height: 16px;
+  border: 1px solid grey;
   
 }
 
