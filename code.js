@@ -68,8 +68,6 @@ function buildUpdatedGrid() {
   removeChildren();
   buildGrid();
   setBoxParams();
-
-  mainGame();
 }
 
 // Determine box width and height 
@@ -90,8 +88,6 @@ function buildGrid() {
     for (let i_2 = 0; i_2 < gridSizeVal; i_2++) {
       let currentBox = document.createElement('div')
       currentBox.setAttribute('id', 'box');
-      // currentBox.setAttribute('onmouseup', 'mouseUp()');
-      // currentBox.setAttribute('onmousedown', 'mouseDown()');
       pad.appendChild(currentBox);
     }
   }
@@ -111,7 +107,11 @@ function removeChildren() {
 // Reloads The Page
 
 function reloadPage() {
-  document.location.reload();
+  Array.from(pad.children).forEach((child) => {
+    child.style.backgroundColor = 'white';
+  })
+
+  // document.location.reload();
 }
 
 // Listen for Clear the Pad Click
@@ -161,19 +161,6 @@ function mouseUp() {
 }
 
 
-function mainGame() {
-
-  // Detect when mouse hovers over a box
-
-  // Array.from(pad.children).forEach((b) => {
-  //   b.addEventListener('mouseover', () => {
-  //     b.style.backgroundColor = currentColor;
-  //   })
-  // })
-}
-
-
-mainGame(true);
 
 
 // Implement opacity, that keeps on increasing by 0.2

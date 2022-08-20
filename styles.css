@@ -12,8 +12,8 @@
 
 html {
   background-color: #66ffc2;
-  /* background-color: rgb(49, 157, 186);
-  background-color: rgb(200, 200, 255); */
+  /* background-color: rgb(49, 157, 186); */
+  /* background-color: rgb(200, 200, 255); */
 }
 
 body {
@@ -21,10 +21,17 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   position: absolute;
-  gap: 50px;
+  gap: 40px;
+  font-family: monospace;
+}
+
+#title {
+  font-size: 70px;
+  font-family: 'Permanent Marker', cursive;
+  margin: 0;
 }
 
 #mainBody {
@@ -37,22 +44,36 @@ body {
 #pad {
   width: 540px;
   height: 540px;
-  border: 2px solid black;
+  border: 3px solid black;
+  border-radius: 7px;
   display: flex;
   flex-wrap: wrap;
   background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
   /* margin-right: 500px; */
 }
 
 #box {
-  width: 16px;
-  height: 16px;
+  width: 14.3635px;
+  height: 14.3635px;
   border: 1px solid grey;
   
 }
 
 #gridSize {
   width: 50px;
+}
+
+#gridSizeDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Fredoka One', cursive;
+}
+
+#gridSizeValue {
+  margin: 0;
 }
 
 #leftSection {
@@ -65,6 +86,7 @@ body {
 #colorSelectors {
   display: flex;
   gap: 10px;
+  /* height: 200px; */
 }
 
 #redSlideCont {
@@ -75,24 +97,14 @@ body {
 /* Color Picker Styles */
 
 #colorDisplay {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   box-shadow: -3px -3px 7px #e9e9e9a9,
               3px 3px 7px #e9e9e9a9;
-  position: absolute;
-  top: 200px;
+  margin-bottom: 60px;
+  /* position: absolute; */
 }
-
-/* #colorSelectors input {
-  height: 30px;
-  width: 60px;
-  font-size: 30px;
-  color: seashell;
-  opacity: 0.7;
-  border: none;
-  border-radius: 4px;
-} */
 
 #redRange {
   background-color: red;
@@ -186,4 +198,51 @@ override default look) */
   background: #04AA6D;
   cursor: pointer;
   border-radius: 25px;
+}
+
+/* Button Custom Design */
+
+#pageReload, #eraser, #opacity {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 40px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 14px;
+}
+
+#pageReload:focus, #eraser:focus, #opacity:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+#pageReload:hover, #eraser:hover, #opacity:hover {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+#pageReload:active, #eraser:active, #opacity:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
 }
